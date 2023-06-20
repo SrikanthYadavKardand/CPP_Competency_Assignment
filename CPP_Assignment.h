@@ -11,7 +11,9 @@ class Car
 	void Brake(void);
 	unsigned int GetReleaseYear(void);
 	string GetCustomerName(void);
-
+	Car();
+	~Car();
+	Car(unsigned int year, string customer1);
 	
 	private:
 	string customer;

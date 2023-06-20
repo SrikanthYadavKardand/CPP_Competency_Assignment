@@ -8,7 +8,7 @@ int main()
 {
 	int i;
 	
-
+	Car obj1(2023, "VW");  // calling parameterized constructor.
 	
 	for(i=0; i!=5;++i) 			//this for loop will execute for 5 times until i becomes 0
 	{
@@ -51,4 +51,25 @@ void Car::Accelerate(void)
 void Car::Brake(void)
 {
 	speed -=10;
+}
+
+Car::Car()
+{
+	ReleaseYear = 0;
+	customer = "";
+	speed = 0;
+	cout << "\nDefault constructor is called\n";
+}
+
+Car::~Car()
+{
+	cout << "\nDestructor is called\n";
+}
+
+Car::Car(unsigned int year, string customer1)
+{
+	ReleaseYear = year;
+	customer = customer1;
+	speed = 0;
+	cout << "\nparametarized constructor is called\n";
 }
