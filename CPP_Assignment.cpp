@@ -9,28 +9,27 @@ int main()
 	int i;
 	string customerName;
 	unsigned int speed, year;
-	Car obj2;
-	Car obj1(2023, "Honda Motor Company");  // calling parameterized constructor.
+	Car HondaMotorCompany(2023, "Honda Motor Company");  // calling parameterized constructor.
 	
 	for(i=0; i!=5;++i) 			//this for loop will execute for 5 times until i becomes 0
 	{
-		obj1.Accelerate(); 		// call Accelerate function to accelerate the car by 10 speed.
+		HondaMotorCompany.Accelerate(); 		// call Accelerate function to accelerate the car by 10 speed.
 	}
 	cout << "\nCurrent speed of the car after accelerate 5 times\n";
-	cout << obj1.GetSpeed(); // call Get speed function to get the speed details and print the current speed of the car after accelerate.	
+	cout << HondaMotorCompany.GetSpeed(); // call Get speed function to get the speed details and print the current speed of the car after accelerate.	
 	
 	for(i=0; i!=5;++i) 				//this for loop will execute for 5 times until i becomes 0
 	{
-		obj1.Brake();				// call Brake function to Deaccelerate the car by 10 speed.
+		HondaMotorCompany.Brake();				// call Brake function to Deaccelerate the car by 10 speed.
 	}
 	cout << "\nCurrent speed of the car after brake 5 times\n";
-	cout << obj1.GetSpeed(); 	// call Get speed function to get the speed details and print the current speed of the car after Brake.
+	cout << HondaMotorCompany.GetSpeed(); 	// call Get speed function to get the speed details and print the current speed of the car after Brake.
 
 	
-	obj1.HmiDisplayFunction(&customerName);		// overload function is called to get customer name.
+	HondaMotorCompany.HmiDisplayFunction(&customerName);		// overload function is called to get customer name.
 	cout << "\nHmiDisplayFunction display customer name : ";
 	cout << customerName;
-	obj1.HmiDisplayFunction(&year, &speed);		// overload function is called to get release year and current speed.
+	HondaMotorCompany.HmiDisplayFunction(&year, &speed);		// overload function is called to get release year and current speed.
 	cout << "\nHmiDisplayFunction display Release year : ";
 	cout << year;
 	cout << "\nHmiDisplayFunction display current speed : ";
